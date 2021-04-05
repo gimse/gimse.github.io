@@ -16,6 +16,12 @@
 
   <!-- Including our own JavaScript file -->
   <script>
+	
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
 
 function statusChangeCallback(response) {
                 console.log('statusChangeCallback');
@@ -59,11 +65,7 @@ function statusChangeCallback(response) {
        fjs.parentNode.insertBefore(js, fjs);
      }(document, 'script', 'facebook-jssdk'));
 
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
+	
 
 
   </script>
